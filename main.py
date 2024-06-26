@@ -8,11 +8,8 @@ https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv - temperatures
 http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=csv - co2 levels
 """
 
-df_gtemp = pd.read_csv(r'path_to_csv_file\global_temp.csv',
-                      skiprows=1)
-
-df_co2 = pd.read_csv(r'path_to_csv_file\API_co2.csv',
-                      skiprows=4)
+df_gtemp = pd.read_csv(r'path_to_csv_file\global_temp.csv', skiprows=1)
+df_co2 = pd.read_csv(r'path_to_csv_file\API_co2.csv', skiprows=4)
 
 # Cleaning dataframes
 df_gtemp.set_index('Year', inplace=True)
